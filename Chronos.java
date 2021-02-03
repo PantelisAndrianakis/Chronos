@@ -33,6 +33,9 @@ public class Chronos extends Thread
 	
 	public Chronos()
 	{
+		super.setName("Chronos");
+		super.setPriority(MAX_PRIORITY);
+		super.setDaemon(true);
 		super.start();
 	}
 	
