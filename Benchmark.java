@@ -35,7 +35,7 @@ public class Benchmark
 		System.out.println("Starting tests...");
 		
 		@SuppressWarnings("unused")
-		double time;
+		long time;
 		
 		long startTime = System.currentTimeMillis();
 		for (int i = 0; i < testSize; i++)
