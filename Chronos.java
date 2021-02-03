@@ -19,6 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+package chronos;
 
 /**
  * Chronos updates an internal long value with System.currentTimeMillis() every 1 millisecond.<br>
