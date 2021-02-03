@@ -26,7 +26,7 @@
  */
 public class Benchmark
 {
-	public Benchmark()
+	public static void main(String[] args)
 	{
 		// Configs.
 		int testSize = 1000000000;
