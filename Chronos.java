@@ -22,8 +22,8 @@
 package chronos;
 
 /**
- * Chronos updates an internal long value with System.currentTimeMillis() every 1 millisecond.<br>
- * To get the current time in milliseconds use Chronos.get().currentTimeMillis()
+ * Chronos updates an internal long value with System.currentTimeMillis() approximately every millisecond.<br>
+ * To get the current time in milliseconds use Chronos.currentTimeMillis()
  * @author Pantelis Andrianakis
  * @version February 3rd 2021
  */
@@ -46,6 +46,7 @@ public class Chronos extends Thread
 		{
 			_currentTimeMillis = System.currentTimeMillis();
 			
+			// Sleep for approximately one millisecond.
 			try
 			{
 				Thread.sleep(1);
@@ -56,12 +57,18 @@ public class Chronos extends Thread
 		}
 	}
 	
-	public long currentTimeMillis()
+	/**
+	 * Returns the current time in milliseconds. Note that while the unit of time of the return value is a millisecond,the granularity of the value depends on the underlying operating system and may be larger. For example, many operating systems measure time in units of tens of milliseconds.<br>
+	 * <br>
+	 * See the description of the class Date for a discussion of slight discrepancies that may arise between "computer time" and coordinated universal time (UTC).
+	 * @return the difference, measured in milliseconds, between the current time and midnight, January 1, 1970 UTC.
+	 */
+	public static long currentTimeMillis()
 	{
-		return _currentTimeMillis;
+		return getInstance()._currentTimeMillis;
 	}
 	
-	public static Chronos get()
+	public static Chronos getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

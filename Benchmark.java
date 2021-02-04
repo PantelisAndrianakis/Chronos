@@ -42,13 +42,13 @@ public class Benchmark
 		{
 			time = System.currentTimeMillis();
 		}
-		System.out.println("Normal System.currentTimeMillis() took " + (System.currentTimeMillis() - startTime) + " milliseconds.");
+		System.out.println("System.currentTimeMillis() took " + (System.currentTimeMillis() - startTime) + " milliseconds.");
 		
 		startTime = System.currentTimeMillis();
 		for (int i = 0; i < testSize; i++)
 		{
-			time = Chronos.get().currentTimeMillis();
+			time = Chronos.currentTimeMillis();
 		}
-		System.out.println("Chronos.get().currentTimeMillis() took " + (System.currentTimeMillis() - startTime) + " milliseconds.");
+		System.out.println("Chronos.currentTimeMillis() took " + (System.currentTimeMillis() - startTime) + " milliseconds.");
 	}
 }
