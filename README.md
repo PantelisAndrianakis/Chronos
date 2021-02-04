@@ -1,7 +1,7 @@
 # Chronos
 Reduce the overhead from mass requesting System.currentTimeMillis()<br>
 <br>
-## What Chonos does
+## What Chronos does
 Chronos updates an internal long value with System.currentTimeMillis() approximately every millisecond.<br>
 <br>
 ### How to use
